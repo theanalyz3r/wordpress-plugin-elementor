@@ -1,0 +1,17 @@
+{
+  "name": "qordoba/qordoba-wp",
+  "description": "Wordpress plugin for synchronizing Polylang with Qordoba",
+  "minimum-stability ": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Qordobacode/api-sdk-php"
+    }
+  ],
+  "require": {
+    "qordoba/qordoba-php": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  }
+}
