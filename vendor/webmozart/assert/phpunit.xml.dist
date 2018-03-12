@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~
+  ~ PHP version 5 and 7
+  ~
+  ~ @author Qordoba Team <support@qordoba.com>
+  ~ @copyright 2018 Qordoba Team
+  ~
+  -->
+
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="Webmozart Assert Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Whitelist for code coverage -->
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>

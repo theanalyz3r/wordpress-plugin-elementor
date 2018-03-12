@@ -1,0 +1,73 @@
+<?php
+
+/**
+ *
+ * PHP version 5 and 7
+ *
+ * @author Qordoba Team <support@qordoba.com>
+ * @copyright 2018 Qordoba Team
+ *
+ */
+
+namespace Respect\Validation\Rules;
+
+/**
+ * @group  rule
+ * @covers Respect\Validation\Rules\Positive
+ * @covers Respect\Validation\Exceptions\PositiveException
+ */
+class PositiveTest extends \PHPUnit_Framework_TestCase
+{
+    protected $object;
+
+    protected function setUp()
+    {
+        $this->object = new Positive();
+    }
+
+    /**
+     * @dataProvider providerForPositive
+     */
+    public function testPositive($input)
+    {
+        $this->assertTrue($this->object->__invoke($input));
+        $this->assertTrue($this->object->check($input));
+        $this->assertTrue($this->object->assert($input));
+    }
+
+    /**
+     * @dataProvider providerForNotPositive
+     * @expectedException Respect\Validation\Exceptions\PositiveException
+     */
+    public function testNotPositive($input)
+    {
+        $this->assertFalse($this->object->__invoke($input));
+        $this->assertFalse($this->object->assert($input));
+    }
+
+    public function providerForPositive()
+    {
+        return [
+            [16],
+            ['165'],
+            [123456],
+            [1e10],
+        ];
+    }
+
+    public function providerForNotPositive()
+    {
+        return [
+            [''],
+            [null],
+            ['a'],
+            [' '],
+            ['Foo'],
+            ['-1.44'],
+            [-1e-5],
+            [0],
+            [-0],
+            [-10],
+        ];
+    }
+}

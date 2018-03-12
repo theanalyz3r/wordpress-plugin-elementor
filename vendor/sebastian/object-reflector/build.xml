@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~
+  ~ PHP version 5 and 7
+  ~
+  ~ @author Qordoba Team <support@qordoba.com>
+  ~ @copyright 2018 Qordoba Team
+  ~
+  -->
+
+<project name="object-reflector" default="setup">
+    <target name="setup" depends="clean,composer"/>
+
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${basedir}/vendor"/>
+        <delete file="${basedir}/composer.lock"/>
+    </target>
+
+    <target name="composer" depends="clean" description="Install dependencies with Composer">
+        <exec executable="composer" taskname="composer">
+            <arg value="update"/>
+            <arg value="--no-interaction"/>
+            <arg value="--no-progress"/>
+            <arg value="--no-ansi"/>
+            <arg value="--no-suggest"/>
+            <arg value="--optimize-autoloader"/>
+            <arg value="--prefer-stable"/>
+        </exec>
+    </target>
+</project>
+

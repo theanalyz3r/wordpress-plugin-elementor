@@ -1,0 +1,17 @@
+<!--
+  ~
+  ~ PHP version 5 and 7
+  ~
+  ~ @author Qordoba Team <support@qordoba.com>
+  ~ @copyright 2018 Qordoba Team
+  ~
+  -->
+
+<phpunit>
+    <testsuite name="Github issue 1216">
+        <file>Issue1216Test.php</file>
+    </testsuite>
+    <php>
+        <env name="loadedFromConfig" value="1"/>
+    </php>
+</phpunit>

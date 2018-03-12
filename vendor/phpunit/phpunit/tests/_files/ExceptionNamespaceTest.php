@@ -1,0 +1,46 @@
+<?php
+/**
+ *
+ * PHP version 5 and 7
+ *
+ * @author Qordoba Team <support@qordoba.com>
+ * @copyright 2018 Qordoba Team
+ *
+ */
+
+namespace My\Space;
+
+class ExceptionNamespaceTest extends \PHPUnit\Framework\TestCase
+{
+    /**
+     * Exception message
+     *
+     * @var string
+     */
+    const ERROR_MESSAGE = 'Exception namespace message';
+
+    /**
+     * Exception code
+     *
+     * @var int
+     */
+    const ERROR_CODE = 200;
+
+    /**
+     * @expectedException Class
+     * @expectedExceptionMessage My\Space\ExceptionNamespaceTest::ERROR_MESSAGE
+     * @expectedExceptionCode My\Space\ExceptionNamespaceTest::ERROR_CODE
+     */
+    public function testConstants()
+    {
+    }
+
+    /**
+     * @expectedException Class
+     * @expectedExceptionCode My\Space\ExceptionNamespaceTest::UNKNOWN_CODE_CONSTANT
+     * @expectedExceptionMessage My\Space\ExceptionNamespaceTest::UNKNOWN_MESSAGE_CONSTANT
+     */
+    public function testUnknownConstants()
+    {
+    }
+}

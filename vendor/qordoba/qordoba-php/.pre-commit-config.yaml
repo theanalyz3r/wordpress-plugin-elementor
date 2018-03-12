@@ -1,0 +1,12 @@
+-   repo: git@github.com:hootsuite/pre-commit-php.git
+    sha: 1.2.0
+    hooks:
+    -   id: php-lint
+    -   id: php-unit
+-   repo: local
+    hooks:
+    -   id: version-update
+        name: Version autoupdate
+        language: script
+        entry: bin/git/version-update.sh
+        files: \.sh$

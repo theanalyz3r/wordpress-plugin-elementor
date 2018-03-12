@@ -1,0 +1,31 @@
+<?php
+/**
+ *
+ * PHP version 5 and 7
+ *
+ * @author Qordoba Team <support@qordoba.com>
+ * @copyright 2018 Qordoba Team
+ *
+ */
+
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @coversDefaultClass \Foo\CoveredClass
+ */
+class NamespaceCoverageCoversClassTest extends TestCase
+{
+    /**
+     * @covers ::privateMethod
+     * @covers ::protectedMethod
+     * @covers ::publicMethod
+     * @covers \Foo\CoveredParentClass::privateMethod
+     * @covers \Foo\CoveredParentClass::protectedMethod
+     * @covers \Foo\CoveredParentClass::publicMethod
+     */
+    public function testSomething()
+    {
+        $o = new Foo\CoveredClass;
+        $o->publicMethod();
+    }
+}

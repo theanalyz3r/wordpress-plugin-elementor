@@ -1,0 +1,17 @@
+<?php
+/**
+ *
+ * PHP version 5 and 7
+ *
+ * @author Qordoba Team <support@qordoba.com>
+ * @copyright 2018 Qordoba Team
+ *
+ */
+
+class ConcreteTest extends AbstractTest
+{
+    public function testTwo()
+    {
+        $this->assertTrue(true);
+    }
+}

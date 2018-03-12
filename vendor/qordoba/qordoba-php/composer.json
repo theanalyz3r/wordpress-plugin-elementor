@@ -1,0 +1,20 @@
+{
+  "name": "qordoba/qordoba-php",
+  "version": "0.1.10",
+  "autoload": {
+    "psr-0": {
+      "Qordoba": "src/",
+      "Qordoba\\Tests": "tests/"
+    },
+    "files": [
+      "src/Qordoba/Helpers.php"
+    ]
+  },
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "respect/validation": "~1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "6.2"
+  }
+}

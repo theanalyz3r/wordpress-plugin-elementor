@@ -1,0 +1,33 @@
+<?php
+/**
+ *
+ * PHP version 5 and 7
+ *
+ * @author Qordoba Team <support@qordoba.com>
+ * @copyright 2018 Qordoba Team
+ *
+ */
+
+class DataProviderDependencyTest extends PHPUnit\Framework\TestCase
+{
+    public function testReference()
+    {
+        $this->markTestSkipped('This test should be skipped.');
+        $this->assertTrue(true);
+    }
+
+    /**
+     * @see https://github.com/sebastianbergmann/phpunit/issues/1896
+     * @depends testReference
+     * @dataProvider provider
+     */
+    public function testDependency($param)
+    {
+    }
+
+    public function provider()
+    {
+        $this->markTestSkipped('Any test with this data provider should be skipped.');
+        return [];
+    }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~
+  ~ PHP version 5 and 7
+  ~
+  ~ @author Qordoba Team <support@qordoba.com>
+  ~ @copyright 2018 Qordoba Team
+  ~
+  -->
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.7/phpunit.xsd"
+         bootstrap="src/autoload.php"
+         backupGlobals="false"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         verbose="true">
+    <testsuite>
+        <directory suffix="Test.php">tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

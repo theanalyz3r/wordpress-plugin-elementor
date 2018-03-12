@@ -1,0 +1,19 @@
+<!--
+  ~
+  ~ PHP version 5 and 7
+  ~
+  ~ @author Qordoba Team <support@qordoba.com>
+  ~ @copyright 2018 Qordoba Team
+  ~
+  -->
+
+<phpunit defaultTestSuite="Second">
+    <testsuites>
+        <testsuite name="First">
+            <file>../_files/DummyFooTest.php</file>
+        </testsuite>
+        <testsuite name="Second">
+            <file>../_files/DummyBarTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

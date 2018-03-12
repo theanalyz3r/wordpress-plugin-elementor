@@ -1,2 +1,6 @@
-# wordpress-plugin-elementor
-wordpress-plugin-elementor
+# Qordoba Wordpress plugin
+
+## Installation
+
+## Configuration
+
